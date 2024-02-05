@@ -3,7 +3,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [System.Security.Principal.Windo
     exit
 }
 
-function Get-CelexPrefetch {
+function CelexPrefetch {
     $celexprefetcj = Get-ChildItem -Path "C:\Windows\Prefetch" -Filter "*CELEX.EXE*.pf"
 
     if ($celexprefetcj) {
@@ -27,7 +27,7 @@ function CelexAppData {
     }
 }
 
-Get-CelexPrefetch
+CelexPrefetch
 CelexAppData
 
 Start-Sleep -Seconds 10
